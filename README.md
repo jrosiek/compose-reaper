@@ -29,3 +29,10 @@ Your tests require dependencies running in docker containers, that are set up wi
 
 And that's all. You don't even have to explicitly shut down the docker compose project in your tests. The reaper will take care of it.
 
+## Configuration
+
+There is a few environment variables that can be passed to the reaper to override default values
+
+* `REAPER_PORT` - keep alive port (default: 2222)
+* `REAPER_CON_TIMEOUT` - how long in seconds should reaper wait for keep alive connection before reaping the project (default: 30)
+* `REAPER_REAP_DELAY` - delay in sesconds between entering reap mode and actual shutdown of the project (default: 60)
